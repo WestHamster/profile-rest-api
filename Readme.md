@@ -1,11 +1,12 @@
 # Profiles REST API
+
+(Tested on Windows)
+
 Installation:
 
 1. Download and install Vagrant (for server setup)
 2. Download and install VirtualBox
-3. Install python
-4. Download and install Django (Web Framework) and Django Rest Framework.
-5. Install Atom
+3. Install Atom
 6. Install Git
 7. Install Mode Header for Google Chrome extension
 
@@ -16,3 +17,27 @@ Docker: 1. Streamline workflow
 
 Vagrant: 1. Just getting started
 	      2. Supported on wider range of OS
+
+Procedure:
+1. Install the requirements
+2. Create a workspace (folder for storing your work)
+3. Using GIT implement the following in your workspace:
+	a) git init
+	b) git add .
+	c) Check the folder is added or not in Atom
+	d) git commit -am "name of changes in commit"
+	e) Find a public/private key in the folder using "ls ~/.ssh" in GIT bash in the workspace
+	f) Create a key using "ssh-keygen -t rsa -b 4096 -C "emailID""
+	g) Click enter for default folder and enter a passphrase if you want
+	h) Check if the file exists using "ls ~/.ssh"
+	i) If exists then open ".pub" file using "cat ~/.ssh/ida_rsa.pub"  #this contains #public key
+	j) Copy this key from ssh-rsa till the emailID given
+	j) Add that public key in GitHub by going to SSH/GPG keys in settings and add the title as the your PC's name using "hostname" in cmd
+	k) Open Git bash and push the folder to your GitHub account using the commands:
+		1.1) git remote add origin https://github.com/GITHUB_ACCOUNT/repository_name.git
+		1.2) git push -u origin master (enter your GitHub credentials)
+		1.3) After adding/editing some files use:
+			1.3.1) git add .
+			1.3.2) git commit -m "Changes made title"
+			1.3.3) git push origin
+	
