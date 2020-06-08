@@ -95,3 +95,21 @@ or use:
 ```
 pip install -r requirements.txt
 ```
+
+Creating a Django Project:
+
+Setting up:
+
+1) Call the Django admin and start new project using
+```
+django-admin.py startproject profiles_project .	#"." is used to make a folder in root
+```
+2) Now you can see project folder has been initiated in Atom, create an app(API) using
+```
+python manage.py startapp profiles_api
+```
+3) Enable the profile_api in project by going to setting.py in profiles_project and listing the apps required to install for the project and add ```rest_framework```,```rest_framework.authtoken``` and ```profile_api``` in the same format
+
+Running:
+1) ```python manage.py runserver 0.0.0.0:8000``` to run our server
+2) Goto ```127.0.0.1``` on browser to check whether the project setup was done or not
