@@ -66,8 +66,8 @@ k) Open Git bash and push the folder to your GitHub account using the commands:
 	then "vagrant up"
 	and then get into vagrant using "vagrant ssh" (can also be used to get back in after exiting)
 	```
-4.2) Use "cd /vagrant" to get into the Atom folder of Vagrant, now check the files using "ls" (now you can see the sync by
-adding or deleting in any place, very cool sync)
+4.2) Use "cd /vagrant" to get into the Atom folder of Vagrant, now check the files using "ls" (now you can see the sync by adding or deleting in any place, very cool sync)
+
 5. Create any file of python and run it using "python filename.py".
 6. Exit the vagrant using "exit"
 7. Commit the changes using 1.3 given above
