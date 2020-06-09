@@ -113,3 +113,8 @@ python manage.py startapp profiles_api
 Running:
 1) ```python manage.py runserver 0.0.0.0:8000``` to run our server
 2) Goto ```127.0.0.1``` on browser to check whether the project setup was done or not
+
+Creating our user database model:
+
+1)Open ```models.py``` and import ```AbstractBaseUser``` and ```PermissionMixin``` from ```auth.models```
+2) Follow the code in ```models.py``` in ```profile_api```
