@@ -134,5 +134,14 @@ Enabling a Django admin:
 
 2. Enable Django admin (default already created but to register new model in interface) by going to ```admin.py``` and importing ```from profile_api import models``` and registering our model using ```admin.site.register(models.UserProfile)```
 
-3. Test the Django admin by starting the development server and going to local host by:
- ```python manage.py runserver 0.0.0.0:8000``` and opening ```127.0.0.1:8000/admin```
+3. Test the Django admin by starting the development server and going to local host by:```python manage.py runserver 0.0.0.0:8000``` and opening ```127.0.0.1:8000/admin```
+
+Creating our APIView:
+
+1. Go to ```views.py``` and write the code given for Response passed as dictionary
+
+2. Configure the URLs by creating a new file named ```urls.py``` in ```profile_api```
+
+3. Create another ```urls.py``` in profile_api and configure according to code given
+
+4. Test the url by opening ```127.0.0.1:8000/api/hello-view```
