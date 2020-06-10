@@ -1,6 +1,34 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import PermissionMixin
+from django.contrib.auth.models import BaseUserManager
+
+
+class UserProfileManager(BaseUserManager):
+    """Manager for user profiles"""
+
+    def create_user(self,email,name,password=None):
+        """Create a new user profile"""
+        if not email:
+            raise ValueError('Users must have an email address')
+
+        email = self.normalize_email(email)
+        user = self.model(email=email,name=name)
+
+        user.set_password(password)     #password is stored in HASH
+        user.save(using=self.db)        #saving objects in django
+
+        return user
+
+    def create_superuser(self,email,name,password):
+        """Create and save a new superuser with given details"""
+        user = self.create_user(email,name,password)
+
+        user.is_superuser = True   #is_superuser is already created in by PermissionMixin
+        user.is_staff = True
+        user.save(using=self.db)
+
+        return user
 
 
 class UserProfile(AbstractBaseUser,PermissionMixin):

@@ -116,5 +116,8 @@ Running:
 
 Creating our user database model:
 
-1)Open ```models.py``` and import ```AbstractBaseUser``` and ```PermissionMixin``` from ```auth.models```
-2) Follow the code in ```models.py``` in ```profile_api```
+1. Open ```models.py``` and import ```AbstractBaseUser``` and ```PermissionMixin``` from ```auth.models```
+
+2. Follow the code in ```models.py``` in ```profile_api```
+
+3. Maintain a ```UserProfileManager``` as the admin of the application and create a user, superuser
