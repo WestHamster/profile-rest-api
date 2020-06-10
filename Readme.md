@@ -127,3 +127,12 @@ Creating our user database model:
 4.1 Go to Vagrant and in the virtual environment use ```python manage.py makemigrations profile_api``` to create a file in ```profile_api```
 
 4.2 Run the migration using ```python manage.py migrate```
+
+Enabling a Django admin:
+
+1. Create a superuser in cli using ```python manage.py createsuperuser``` and enter the credentials for the data to be safe
+
+2. Enable Django admin (default already created but to register new model in interface) by going to ```admin.py``` and importing ```from profile_api import models``` and registering our model using ```admin.site.register(models.UserProfile)```
+
+3. Test the Django admin by starting the development server and going to local host by:
+ ```python manage.py runserver 0.0.0.0:8000``` and opening ```127.0.0.1:8000/admin```
