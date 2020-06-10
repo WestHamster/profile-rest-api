@@ -136,7 +136,7 @@ Enabling a Django admin:
 
 3. Test the Django admin by starting the development server and going to local host by:```python manage.py runserver 0.0.0.0:8000``` and opening ```127.0.0.1:8000/admin```
 
-Creating our APIView:
+Creating our APIView with GET, POST, PUT, PATCH, DELETE:
 
 1. Go to ```views.py``` and write the code given for Response passed as dictionary
 
@@ -145,3 +145,9 @@ Creating our APIView:
 3. Create another ```urls.py``` in profile_api and configure according to code given
 
 4. Test the url by opening ```127.0.0.1:8000/api/hello-view```
+
+5. Add a GET method in ```views.py``` to return a message
+
+5. Add a ```serializers.py``` to profile_api and check the code in the above
+
+6. Add a POST method in ```views.py``` to implement the serializer and to handle requests.
