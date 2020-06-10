@@ -60,13 +60,13 @@ k) Open Git bash and push the folder to your GitHub account using the commands:
 		1.3.3) git push origin
 ```
 4. Using Vagrant as virtual space to work after installation:
-4.1) Run vagrant using
+4.1 Run vagrant using
 	```
 	"vagrant init ubuntu/bionic64"
 	then "vagrant up"
 	and then get into vagrant using "vagrant ssh" (can also be used to get back in after exiting)
 	```
-4.2) Use "cd /vagrant" to get into the Atom folder of Vagrant, now check the files using "ls" (now you can see the sync by adding or deleting in any place, very cool sync)
+4.2 Use "cd /vagrant" to get into the Atom folder of Vagrant, now check the files using "ls" (now you can see the sync by adding or deleting in any place, very cool sync)
 
 5. Create any file of python and run it using "python filename.py".
 6. Exit the vagrant using "exit"
@@ -100,19 +100,19 @@ Creating a Django Project:
 
 Setting up:
 
-1) Call the Django admin and start new project using
+1. Call the Django admin and start new project using
 ```
 django-admin.py startproject profiles_project .	#"." is used to make a folder in root
 ```
-2) Now you can see project folder has been initiated in Atom, create an app(API) using
+2. Now you can see project folder has been initiated in Atom, create an app(API) using
 ```
 python manage.py startapp profiles_api
 ```
-3) Enable the profile_api in project by going to setting.py in profiles_project and listing the apps required to install for the project and add ```rest_framework```,```rest_framework.authtoken``` and ```profile_api``` in the same format
+3. Enable the profile_api in project by going to setting.py in profiles_project and listing the apps required to install for the project and add ```rest_framework```,```rest_framework.authtoken``` and ```profile_api``` in the same format
 
 Running:
-1) ```python manage.py runserver 0.0.0.0:8000``` to run our server
-2) Goto ```127.0.0.1``` on browser to check whether the project setup was done or not
+1. ```python manage.py runserver 0.0.0.0:8000``` to run our server
+2. Goto ```127.0.0.1``` on browser to check whether the project setup was done or not
 
 Creating our user database model:
 
@@ -121,3 +121,9 @@ Creating our user database model:
 2. Follow the code in ```models.py``` in ```profile_api```
 
 3. Maintain a ```UserProfileManager``` as the admin of the application and create a user, superuser
+
+4. Create migrations and sync DB's:
+
+4.1 Go to Vagrant and in the virtual environment use ```python manage.py makemigrations profile_api``` to create a file in ```profile_api```
+
+4.2 Run the migration using ```python manage.py migrate```
