@@ -13,7 +13,7 @@ class UserProfileManager(BaseUserManager):
             raise ValueError('Users must have an email address')
 
         email = self.normalize_email(email)
-        user = self.model(email=email,name=name)
+        user = self.model(email=email,name=name,phone=phone)
 
         user.set_password(password)     #password is stored in HASH
         user.save(using=self.db)        #saving objects in django

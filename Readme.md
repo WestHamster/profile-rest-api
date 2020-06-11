@@ -161,3 +161,7 @@ Creating a ViewSet for our API:
 2. Goto ```urls.py``` in profile_api and import ```DefaultRouter``` and make an include operation of router in the path. Check for base_name variable, sometimes it comes basename.
 
 3. Add Create, Retrieve, Update, Partial_Update and Destroy to ViewSet
+
+Building ProfileAPI:
+
+1. Open ```serializers.py``` and add another class ```UserProfileSerializer``` to add the operations in the class like create, update
