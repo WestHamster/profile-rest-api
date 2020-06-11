@@ -165,3 +165,7 @@ Creating a ViewSet for our API:
 Building ProfileAPI:
 
 1. Open ```serializers.py``` and add another class ```UserProfileSerializer``` to add the operations in the class like create, update
+
+2. Create a ViewSet to access through the endpoint in ```views.py``` to allow users create profile
+
+3. Test the create profile using POST and PATCH
