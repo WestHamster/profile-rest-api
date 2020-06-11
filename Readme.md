@@ -153,3 +153,9 @@ Creating our APIView with GET, POST, PUT, PATCH, DELETE:
 6. Add a POST method in ```views.py``` to implement the serializer and to handle requests
 
 7. Add PUT, PATCH and DELETE in ```views.py``` according to the file
+
+Creating a ViewSet for our API:
+
+1. In  ```views.py``` write the ViewSet code by import ViewSet using ```from rest_framework import viewsets```
+
+2. Goto ```urls.py``` in profile_api and import ```DefaultRouter``` and make an include operation of router in the path. Check for base_name variable, sometimes it comes basename.
