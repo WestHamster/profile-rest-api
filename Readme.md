@@ -159,3 +159,5 @@ Creating a ViewSet for our API:
 1. In  ```views.py``` write the ViewSet code by import ViewSet using ```from rest_framework import viewsets```
 
 2. Goto ```urls.py``` in profile_api and import ```DefaultRouter``` and make an include operation of router in the path. Check for base_name variable, sometimes it comes basename.
+
+3. Add Create, Retrieve, Update, Partial_Update and Destroy to ViewSet
