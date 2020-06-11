@@ -150,4 +150,6 @@ Creating our APIView with GET, POST, PUT, PATCH, DELETE:
 
 5. Add a ```serializers.py``` to profile_api and check the code in the above
 
-6. Add a POST method in ```views.py``` to implement the serializer and to handle requests.
+6. Add a POST method in ```views.py``` to implement the serializer and to handle requests
+
+7. Add PUT, PATCH and DELETE in ```views.py``` according to the file
