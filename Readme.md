@@ -175,3 +175,5 @@ Building ProfileAPI:
 5. Add authentication and permission to ```views.py```
 
 6. Adding a search functionality to our API to search for profiles in ```views.py``` by adding ```filters.SearchFilter``` and test the search functionality
+
+7. Add login API to viewset using TokenAuthentication, Django comes with authtoken. Add a new class in ```views.py``` and add the url to ```urls.py``` . Test it by going to ```127.0.0.1:8000/api/login```

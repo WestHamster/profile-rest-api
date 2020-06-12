@@ -11,6 +11,7 @@ router.register('profile',views.UserProfileViewSet) #No need to give basename be
 
 urlpatterns = [
     path('hello-view/',views.HelloApiView.as_view()),        #First it'll check the /api and then check /hello-view
+    path('login/',views.UserLoginApiView.as_view()),
     path('',include(router.urls))
 
 ]
