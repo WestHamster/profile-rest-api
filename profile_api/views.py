@@ -115,3 +115,15 @@ class UserProfileViewSet(viewsets.ModelViewSet):#Just like a normal ViewSet clas
 class UserLoginApiView(ObtainAuthToken):
     """Handle creating user authentication tokens"""
     renderer_classes = api_settings.DEFAULT_RENDERER_CLASSES    #enabled in Django admin
+
+
+class UserProfileFeedViewSet(viewsets.ModelViewSet):
+    """Handles creating reading and updating profile feed items"""
+    authentication_classes = (TokenAuthentication,)
+    serializer_class = serializers.ProfileFeedItemSerializer
+    queryset = models.ProfileFeedItem.objects.all()
+
+    def perform_create(self,serializer):
+        """Sets the user profile to the logged in user"""
+        serializer.save(user_profile=self.request.user)#when new object is created, it is passed as serializer with object
+        #If user is authenticated then request.user is allowed else a new user is added

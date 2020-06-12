@@ -198,3 +198,7 @@ Creating a FeedApp API:
 3. Register the site on ```admin.py``` and you can see that a new profile is generated on ```127.0.0.1:8000/admin```
 
 4. Create a new calss in ```serializer.py``` as ```ProfileFeedItemSerializer``` and create same as ```UserProfileSerializer```
+
+5. Create views similarly to ```UserProfileViewSet``` add authenticator and actions to be performed in the function
+
+6. In the ```urls.py``` register our ```UserProfileFeedViewSet```

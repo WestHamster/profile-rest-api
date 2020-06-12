@@ -8,6 +8,7 @@ from profile_api import views
 router = DefaultRouter()
 router.register('hello-viewset',views.HelloViewSet, basename='hello-viewset')
 router.register('profile',views.UserProfileViewSet) #No need to give basename because queryset is given in the UserProfileViewSet
+router.register('feed',views.UserProfileFeedViewSet)
 
 urlpatterns = [
     path('hello-view/',views.HelloApiView.as_view()),        #First it'll check the /api and then check /hello-view
