@@ -96,6 +96,8 @@ or use:
 pip install -r requirements.txt
 ```
 
+==================================================================================================================================
+
 Creating a Django Project:
 
 Setting up:
@@ -183,3 +185,16 @@ a) Add token to authorization header by first copying the token from the User Lo
 b) Name the RequestHeaders as ```Authorization``` and Value as ```Token *token_number*```
 c) Test it by giving the id value in hyperlink after ```profile/``` , if given same mail you'll be given access to modify
 d) You can disable by unchecking the ModHeader (Remeber to disable the authenticator when using personal stuff)
+
+
+==================================================================================================================================
+
+Creating a FeedApp API:
+
+1. Add a new model item by adding ```from django.conf import settings```
+
+2. Use ```AUTH_USER_MODEL``` from ```settings.py``` and add it in new ```class ProfileFeedItem```
+
+3. Register the site on ```admin.py``` and you can see that a new profile is generated on ```127.0.0.1:8000/admin```
+
+4. Create a new calss in ```serializer.py``` as ```ProfileFeedItemSerializer``` and create same as ```UserProfileSerializer```
