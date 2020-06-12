@@ -173,3 +173,5 @@ Building ProfileAPI:
 4. Create a permission class in ```profile_api``` to prevent users accessing others profile
 
 5. Add authentication and permission to ```views.py```
+
+6. Adding a search functionality to our API to search for profiles in ```views.py``` by adding ```filters.SearchFilter``` and test the search functionality
