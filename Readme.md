@@ -177,3 +177,9 @@ Building ProfileAPI:
 6. Adding a search functionality to our API to search for profiles in ```views.py``` by adding ```filters.SearchFilter``` and test the search functionality
 
 7. Add login API to viewset using TokenAuthentication, Django comes with authtoken. Add a new class in ```views.py``` and add the url to ```urls.py``` . Test it by going to ```127.0.0.1:8000/api/login```
+
+8. Set token header using ```ModHeader``` :
+a) Add token to authorization header by first copying the token from the User Login API
+b) Name the RequestHeaders as ```Authorization``` and Value as ```Token *token_number*```
+c) Test it by giving the id value in hyperlink after ```profile/``` , if given same mail you'll be given access to modify
+d) You can disable by unchecking the ModHeader (Remeber to disable the authenticator when using personal stuff)
