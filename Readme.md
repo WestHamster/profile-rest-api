@@ -204,3 +204,5 @@ Creating a FeedApp API:
 6. In the ```urls.py``` register our ```UserProfileFeedViewSet```
 
 7. Test the POST, PUT, PATCH and DELETE functions on API
+
+8. Add the permissions in the ```premissions.py``` and update it in the ```views.py```
