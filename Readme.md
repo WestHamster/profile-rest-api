@@ -206,3 +206,5 @@ Creating a FeedApp API:
 7. Test the POST, PUT, PATCH and DELETE functions on API
 
 8. Add the permissions in the ```premissions.py``` and update it in the ```views.py```
+
+9. To authenticate the users only change ```IsAuthenticatedOrReadOnly``` to ```IsAuthenticated``` and same from the function of class ```UserProfileFeedViewSet```
