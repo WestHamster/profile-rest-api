@@ -1,0 +1,104 @@
+What is REST?
+
+REpresentational State Transfer
+Resource based
+Six constraints:
+	1) Uniform Interface
+	2) Stateless
+	3) Client Server
+	4) Cacheable
+	5) Layered System
+	6) Code on demand
+
+Method used:
+
+1) GET - to return one or more items
+2) POST - to create an item
+3) PUT - to update an item
+4) PATCH - to partially update an item  --> works with raw_data on webpage as we need to define the data we want to patch.
+5) DELETE - to delete an item
+
+
+When to use APIViews - When you need full control or updating multiple data source in one time or calling another API and requrests
+or when need access to local files or data.
+
+Serialiser -  confer data into python objects and vice-a-versa, to add post and put
+Define the field you want to accept and then call the serializer and they also accept the rule based input
+
+ViewSet - 1) Takes care of logic
+2) Perfect Standard database operation
+3) Fastest way to make database interface
+
+When to use?
+1) Simple CRUD interface for DB
+2) Quick and simple API
+3) Little to no customization on logic
+4) Working with standard data structures
+
+
+Planning Profile API:
+
+1. Creating Profile API- a) Handle Registration of new users
+			 b) Validate profile data
+
+2. Listing existing - a) Searching for profiles
+		      b) Email and name
+
+3. Viewing specific profile - a) Profile ID
+
+4. Update profile - a) Change Name,email and password
+
+5. Delete profile
+
+Making API:
+
+/api/profile/
+1) List all profile when HTTP GET method is called
+2) Create new profile when HTTP POST method is called
+
+/api/profile/*profile_id*/
+1) View specific profile details with HTTP GET
+2) Update using HTTP PUT/PATCH
+3) Remove it using HTTP DELETE
+
+
+Plan Feed API:
+
+Requirements
+1) Create new feed - for logged in user
+2) Updating feed items - for logged in users only
+3) Deleting feed items - for logged in users only
+4) Viewing other feed items - for all users
+
+/api/feed/
+1) List all feed items
+2) GET(list feed items)
+3) POST(create feed item for logged in user)
+
+/api/feed/*feed_id*/
+1) manage specific feed items
+2) GET (the  feed item)
+3) PUT/PATCH (update the feed item)
+4) DELETE (delete the feed item)
+
+
+
+DEPLOYEMENT TO AWS:
+1. Create a EC2 instance by generating a key pair configuration similar to GitHub
+2. After generating, add a deployment code to profile-rest-api
+3. In deploy->setup.sh change the github to your GitHub project URL because the script clones the project from the GitHub
+4. In the base_path variable is our path for the code to be stored
+5. Change the debug mode in profiles_project->settings.py to bool(int(os.environ.get('DEBUG',1))) as anyone can detect 
+vulnerability in the production
+6. Add the STATIC_ROOT as 'static/' to store the static files in Django
+7. Create a server instance by going to EC2 and click launch instance.
+8. After configuring, got to EC2 and copy the public DNS v-4 and use ssh to connect to server by writing 
+ssh ubuntu@*DNScode. Add the paraphrase if entered any in the GitHub SSH time.
+9. Copy the setup script link from GitHub and run curl -sL *link*|sudo bash -
+10. Copy the DNSv-4 link and check it on Chrome which will give BAD HTTP 400 Reques
+11. Go to settings.py and change ALLOWED_HOSTS =[*DNS v-4 link*]
+12. Push the changes to GitHub and open the EC2 server and goto usr/local/apps/profiles-rest-api and run 
+sudo sh ./deploy/update.sh
+13. You can then access the link using DNSv-4link/api/ and admin in place of /api
+14. Create a super-user using 'sudo env/bin/python manage.py createsuperuser' and add email and name and password
+ 
