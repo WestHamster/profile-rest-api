@@ -22,8 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'fta6v-p$2iai5_pd_-oso#mebx0ju__250oznj3#*qr2nxf7zk'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# SECURITY WARNING: don't run with debug turned on in production! VERY IMPORTANT
+DEBUG = bool(int(os.environ.get('DEBUG',1))) #debug on local will be 0 and hence accessible
 
 ALLOWED_HOSTS = []
 
@@ -123,3 +123,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'profile_api.UserProfile'#Django User model, It now fetches details of auth from UserProfile
+
+STATIC_ROOT = 'static/' #all static file of django stored
