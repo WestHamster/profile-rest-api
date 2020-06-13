@@ -202,3 +202,5 @@ Creating a FeedApp API:
 5. Create views similarly to ```UserProfileViewSet``` add authenticator and actions to be performed in the function
 
 6. In the ```urls.py``` register our ```UserProfileFeedViewSet```
+
+7. Test the POST, PUT, PATCH and DELETE functions on API
